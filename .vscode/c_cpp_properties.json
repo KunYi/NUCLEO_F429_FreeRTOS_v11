@@ -1,0 +1,33 @@
+{
+    "configurations": [
+    {
+	    "name": "NUCLEO_F429_FreeRTOS_V11 Linux",
+	    "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Thirdparty/FreeRTOS/portable/GCC/ARM_CM4F"
+        ],
+	    "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+	    "intelliSenseMode": "gcc-arm",
+	    "defines": [
+	        "__arm__",
+	        "STM32F429xx",
+	        "FPU_FPV4",
+	        "USE_HAL_DRIVER",
+	        "__GNUC__"
+	    ],
+	    "compilerArgs": [
+            "-mthumb",
+            "-mcpu=cortex-m4",
+            "-mfpu=fpv4-sp-d16",
+            "-mfloat-abi=hard",
+            "-specs=nosys.specs",
+            "-specs=nano.specs",
+            "-u _printf_float",
+            "-u _scanf_float"
+        ],
+	    "cStandard": "c11",
+	    "cppStandard": "c++17"
+    }],
+    "version": 4
+}
+
